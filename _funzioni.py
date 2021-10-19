@@ -9,7 +9,7 @@ def trova_rima(verso, caratteri_rima):
     parole_del_verso = verso.split(' ')
     rima = parole_del_verso[-1]
     lettere_per_rima = rima[-caratteri_rima:]
-    cmd = 'findstr /E /S ' + lettere_per_rima + ' parole.txt'
+    cmd = 'findstr /E /S ' + lettere_per_rima + ' dizionario.txt'
     lista_rime = os.system(cmd)
     print(lista_rime)
 
@@ -22,7 +22,7 @@ def scrivere_poema(poema):
     # Scrivere un verso
     # Descrizione per utente
     print("""
-          Scrivi il tuo primo verso, l' ultima parola sarà selezionata per trovare una rima
+          Scrivi il tuo primo verso, l' ultima parola sara' selezionata per trovare una rima
           """)
     verso = input('Scrivi il tuo primo verso : ')
     poema.append(verso)
